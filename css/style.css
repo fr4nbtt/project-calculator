@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  color: rgba(70, 240, 120, 1);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(55, 112, 61, 1) 65%,
+    rgba(74, 159, 83, 1) 100%
+  );
+}
+
+h1 {
+  color: rgba(70, 240, 120, 1);
+  text-align: center;
+  margin: 2rem 0 0rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  justify-content: center;
+  align-content: center;
+  min-height: 95vh;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #444;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(70, 240, 120, 1);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  letter-spacing: 0.1rem;
+}
+
+.output .previous-operand {
+  color: rgba(180, 255, 240, 0.9);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  font-size: 2.5rem;
+}
